@@ -1,6 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-void window_Generator(char* title);
+#include <gtk/gtk.h>
 
 #endif

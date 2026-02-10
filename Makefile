@@ -5,8 +5,8 @@ compile:
 	echo "Starting to compile"
 	gcc $(OBJ) -o  $(APPNAME) `pkg-config --cflags --libs gtk+-3.0`
 
-$(APPNAME):
-	./$@
+run: compile
+	./$(APPNAME)
 
 clean:
 	rm -f $(APPNAME)
