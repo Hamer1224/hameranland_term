@@ -1,5 +1,6 @@
 #include "header.h"
 
+
 static void activate(GtkApplication *app, gpointer user_data) {
     AppWidgets *widgets = g_malloc(sizeof(AppWidgets));
     setup_ui(app, widgets);

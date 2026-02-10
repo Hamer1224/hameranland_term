@@ -1,12 +1,12 @@
 OBJ = core.c utils.c screen.c
-APPNAME = test_app
+APPNAME = ide
 
 compile:
-	echo "Starting to compile"
-	gcc $(OBJ) -o  $(APPNAME) `pkg-config --cflags --libs gtk+-3.0`
+	@echo "Starting to compile"
+	gcc `pkg-config --cflags gtk+-3.0 gtksourceview-3.0` $(OBJ) -o $(APPNAME) `pkg-config --libs gtk+-3.0 gtksourceview-3.0`
 
 run: clean compile
 	./$(APPNAME)
 
 clean:
-	rm -f $(APPNAME)
+	rm -f $(APPNAME) build.log
