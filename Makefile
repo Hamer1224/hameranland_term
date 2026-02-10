@@ -9,4 +9,4 @@ run: clean compile
 	./$(APPNAME)
 
 clean:
-	rm -f $(APPNAME) build.log
+	rm -f $(APPNAME) build.log temp.c
